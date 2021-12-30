@@ -1,13 +1,13 @@
 <?php
-    $apikey = '<add your api key here>';
+    include('config.php');
 
     if (isset($_GET['sid'])) {
         $steamid = $_GET['sid'];
     } else {
-        $steamid = '76561197960279927';
+        $steamid = $config["fallbackSteamID"];
     }
 
-    $api = json_decode(file_get_contents("https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=" . $apikey . "&steamids=" . $steamid), true);
+    $api = json_decode(file_get_contents("https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=" . $config["apiKey"] . "&steamids=" . $steamid), true);
 
     $authserver = bcsub( $steamid, '76561197960265728' ) & 1;
     $authid = ( bcsub($steamid, '76561197960265728') - $authserver ) / 2;
@@ -39,9 +39,7 @@
         <div class="progress">
           <span id="percent" class="progress--inner"> 0% </span>
         </div>
-        <span id="status" class="progress--title"
-          >Retrieving server info...</span
-        >
+        <span id="status" class="progress--title">Retrieving server info...</span>
       </div>
       <div class="player--information">
         <div class="player--avatar">
@@ -52,11 +50,9 @@
             <span class="player--username"> <?php echo $player_name; ?> </span>
             <span class="player--steamid"> <?php echo $steamid32; ?> </span>
           </div>
-        </div>
-      </div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.1.18/jquery.backstretch.min.js" integrity="sha512-bXc1hnpHIf7iKIkKlTX4x0A0zwTiD/FjGTy7rxUERPZIkHgznXrN/2qipZuKp/M3MIcVIdjF4siFugoIc2fL0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="assets/js/loading.js"></script>
-  </body>
+        </div> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.1.18/jquery.backstretch.min.js" integrity="sha512-bXc1hnpHIf7iKIkKlTX4x0A0zwTiD/FjGTy7rxUERPZIkHgznXrN/2qipZuKp/M3MIcVIdjF4siFugoIc2fL0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="assets/js/loading.js"></script>
+    </body>
 </html>
