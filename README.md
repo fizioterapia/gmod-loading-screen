@@ -1,6 +1,6 @@
 # Garry's Mod Loading Screen
 
-## This loading screen wasn't finished yet!
+## This loading screen isn't finished yet!
 
 Another loading screen for Garry's Mod.
 
