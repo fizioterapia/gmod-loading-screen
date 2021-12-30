@@ -27,12 +27,6 @@
   </head>
   <body>
     <div id="background">
-<<<<<<< HEAD
-=======
-      <img
-        src="https://cdnb.artstation.com/p/assets/images/images/024/538/827/original/pixel-jeff-clipa-s.gif?1582740711"
-      />
->>>>>>> 5c368cfdab1e356967da758eb4ac89a8636d441c
       <div class="overlay"></div>
     </div>
     <div id="loading">
@@ -61,11 +55,8 @@
         </div>
       </div>
     </div>
-<<<<<<< HEAD
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.1.18/jquery.backstretch.min.js" integrity="sha512-bXc1hnpHIf7iKIkKlTX4x0A0zwTiD/FjGTy7rxUERPZIkHgznXrN/2qipZuKp/M3MIcVIdjF4siFugoIc2fL0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-=======
->>>>>>> 5c368cfdab1e356967da758eb4ac89a8636d441c
     <script src="assets/js/loading.js"></script>
   </body>
 </html>

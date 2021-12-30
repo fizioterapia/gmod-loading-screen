@@ -58,7 +58,6 @@ function refreshProgress() {
 function setProgress(progress) {
   loadingPercent.innerHTML = progress + "%";
 }
-<<<<<<< HEAD
 
 /*
   Backstretch
@@ -77,5 +76,3 @@ var options = {
 };
 
 $("#background").backstretch(images, options);
-=======
->>>>>>> 5c368cfdab1e356967da758eb4ac89a8636d441c
